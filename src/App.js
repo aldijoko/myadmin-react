@@ -13,9 +13,9 @@ import Contacts from "./pages/contacts";
 import Form from "./pages/form";
 // import Line from "./pages/line";
 // import Pie from "./pages/pie";
-// import FAQ from "./pages/faq";
+import FAQ from "./pages/faq";
 // import Geography from "./pages/geography";
-// import Calender from "./pages/calender";
+import Calender from "./pages/calender";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -37,9 +37,9 @@ function App() {
               {/* <Route path="/bar" element={<Bar/>} /> */}
               {/* <Route path="/pie" element={<Pie/>} /> */}
               {/* <Route path="/line" element={<Line/>} /> */}
-              {/* <Route path="/faq" element={<FAQ/>} /> */}
+              <Route path="/faq" element={<FAQ />} />
               {/* <Route path="/geography" element={<Geography/>} /> */}
-              {/* <Route path="/calender" element={<Calender/>} /> */}
+              <Route path="/calender" element={<Calender />} />
             </Routes>
           </main>
         </div>
