@@ -27,8 +27,8 @@ const Dashboard = () => {
         <Box>
           <Button
             sx={{
-              backgroundColor: colors.blueAccent[300],
-              color: colors.gray[100],
+              backgroundColor: colors.greenAccent[800],
+              color: colors.gray[200],
               fontSize: "14px",
               fontWeight: "bold",
               borderRadius: "5px",
@@ -224,7 +224,8 @@ const Dashboard = () => {
               </Box>
               <Box color={colors.gray[100]}>{transaction.date}</Box>
               <Box
-                backgroundColor={colors.greenAccent[400]}
+                backgroundColor={colors.greenAccent[800]}
+                color={colors.gray[100]}
                 p="5px 10px"
                 borderRadius="10px"
               >
@@ -235,6 +236,51 @@ const Dashboard = () => {
         </Box>
 
         {/* Third Section */}
+        <Box
+         gridColumn="span 4"
+         gridRow="span 2"
+         backgroundColor={colors.black[400]}
+         p="30px">
+          <Typography variant="h5" fontWeight="600">
+            Campaign
+          </Typography>
+          <Box display="flex" flexDirection="column" alignItems="center" mt="20px">
+            <ProgressCircle size="125" />
+            <Typography variant="h5" mt="20px" color={colors.greenAccent[500]}>
+              $45,821 revenue generated
+            </Typography>
+            <Typography >
+              Includes extra misc expenditures and costs
+            </Typography>
+          </Box>
+        </Box>
+
+        {/*  */}
+        <Box
+         gridColumn="span 4"
+         gridRow="span 2"
+         backgroundColor={colors.black[400]}
+        >
+          <Typography variant="h5" fontWeight="600" sx={{ p: "25px 25px 0 25px"}}>
+            Sales Quantity
+          </Typography>
+          <Box height="250px" mt="-20px">
+            <BarChart isDashboard={true} />
+          </Box>
+        </Box>
+        <Box
+         gridColumn="span 4"
+         gridRow="span 2"
+         backgroundColor={colors.black[400]}
+         p="30px"
+        >
+          <Typography variant="h5" fontWeight="600" sx={{ p: "25px 25px 0 25px"}}>
+           Geography Based Traffic
+          </Typography>
+          <Box height="200px" >
+            <Choropleth isDashboard={true} />
+          </Box>
+        </Box>
       </Box>
     </Box>
   );

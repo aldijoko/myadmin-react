@@ -43,6 +43,7 @@ const Sidebar = () => {
   return (
     <Box 
       sx={{
+        
         "& .pro-sidebar-inner": {
           backgroundColor: `${colors.black[400]} !important`,
         },
@@ -59,7 +60,7 @@ const Sidebar = () => {
           color: "#6495ED !important",
         }
       }}>
-       <ProSidebar collapsed={collapsed}>
+       <ProSidebar collapsed={collapsed} >
         <Menu iconShape="square">
           <MenuItem
             onClick={() => setCollapsed(!collapsed)}
